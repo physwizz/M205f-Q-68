@@ -1086,7 +1086,7 @@ static int init_dm(struct exynos_cpufreq_domain *domain,
 
 /*physwizz underclocking*/
 /*Underclocking little cores to 208MHz*/
-static unsigned long arg_cpu_min_c1 = 200000; 
+static unsigned long arg_cpu_min_c1 = 208000; 
 static int __init cpufreq_read_cpu_min_c1(char *cpu_min_c1) /*integer remains in memory after function call*/
 {
 	unsigned long ui_khz;
@@ -1103,7 +1103,7 @@ static int __init cpufreq_read_cpu_min_c1(char *cpu_min_c1) /*integer remains in
 __setup("cpu_min_c1=", cpufreq_read_cpu_min_c1);
 
 /*Underclocking big cores to 208MHz*/
-unsigned long arg_cpu_min_c2 = 200000; 
+unsigned long arg_cpu_min_c2 = 208000; 
 
 static __init int cpufreq_read_cpu_min_c2(char *cpu_min_c2)
 {
@@ -1123,7 +1123,7 @@ __setup("cpu_min_c2=", cpufreq_read_cpu_min_c2);
 
 /*Chatur, Carlos Burero & physwizz*/
 /*Overclocking little cores from 1.35GHz to 1.69GHz*/
-static unsigned long arg_cpu_max_c1 = 1690000; /*max_cpu_freq=1.69 GHz for little cores*/
+static unsigned long arg_cpu_max_c1 = 1586000; /*max_cpu_freq=1.69 GHz for little cores*/
 
 static int __init cpufreq_read_cpu_max_c1(char *cpu_max_c1) /*integer remains in memory after function call*/
 {
@@ -1141,7 +1141,7 @@ static int __init cpufreq_read_cpu_max_c1(char *cpu_max_c1) /*integer remains in
 __setup("cpu_max_c1=", cpufreq_read_cpu_max_c1);
 
 /*Overclocking big cores from 1.56GHz to 2.184GHz*/
-unsigned long arg_cpu_max_c2 = 2080000; 
+unsigned long arg_cpu_max_c2 = 1976000; 
 
 static __init int cpufreq_read_cpu_max_c2(char *cpu_max_c2)
 {
